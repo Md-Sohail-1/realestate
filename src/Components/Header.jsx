@@ -12,7 +12,7 @@ const Header = () => {
     <>
       <input type="checkbox" id="checkbox" className="hidden" />  
       <header className="fixed top-0 w-full bg-slate-100 h-16 flex items-center text-blue-600 z-30 px-4 md:px-6 lg:px-10 shadow-sm" >
-        <h1 className="text-2xl uppercase block md:w-84 lg:w-96 px-2 md:px-6 lg:px-12 font-bold">Prime Estate</h1>
+        <h1 className="text-2xl uppercase block md:min-w-96 lg:w-96 px-2 md:px-6 lg:px-12 font-bold">Prime Estate</h1>
         <label onClick={()=> setToggle(!toggle)} htmlFor="checkbox" className="absolute right-4 z-10 text-[24px] text-gray-100 cursor-pointer transition-all md:hidden">
             {
               toggle ? <FaXmark className="text-indigo-600"/> : <FaBars className="text-blue-600"/> 
