@@ -1,0 +1,1 @@
+export const noImage = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFOk8MJZpq8LyDRRfsIeNqi5vWOFi1mjHSKA&usqp=CAU';
