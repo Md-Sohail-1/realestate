@@ -48,11 +48,12 @@ const Buy_HomePage = () => {
   return (
     <section id="buy_home_wrapper" className="min-h-[calc(100vh-128px)] w-full bg-white py-6 mt-16">
       <h3 className="text-3xl font-bold text-center text-gray-800 mb-4">Buy A Property</h3>
-      <div className="w-72 relative mx-auto bg-yellow-100 rounded-lg shadow-[0px_0px_2px_rgba(1,1,1,0.2)] flex align-center justify-end mb-10">
-        <input className="focus:shadow-md px-4 focus:outline-none w-72 h-10 rounded-lg" value={search} type="search" onInput={searchChange} placeholder="Search By Location, Price..."/>
+
+      <div className="w-72 relative md:w-1/3 mx-auto md:ml-auto md:mr-4 bg-yellow-100 rounded-lg shadow-[0px_0px_2px_rgba(1,1,1,0.2)] flex align-center justify-end mb-6">
+        <input className="focus:shadow-md px-4 focus:outline-none w-[100%] h-10 rounded-lg" value={search} type="search" onInput={searchChange} placeholder="Search By Location, Price..."/>
         <BsSearch className="absolute right-4 top-1/2 -translate-y-1/2" />
       </div>
-      <div id="property_wrapper" className={`grid gap-8 px-4 mx-auto rounded-lg sm:grid-cols-2 lg:grid-cols-3 max-w-6xl`}>
+      
       {
         loading ? (
           <div className="grid place-content-center py-40" >
@@ -60,9 +61,13 @@ const Buy_HomePage = () => {
           </div>
         ) : (
           filteredProperty.length > 0 ? (
-            filteredProperty.map((card, index) => (
-              <PropertyCard img={card.img} location={card.location} price={card.price} dataArea={card.area} dataType={card.type} type={card.type} area={card.area} key={index} id={card._id}/>
-            ))
+          <div id="property_wrapper" className={`grid gap-8 px-4 mx-auto rounded-lg sm:grid-cols-2 lg:grid-cols-3 max-w-6xl`}>
+            {
+              filteredProperty.map((card, index) => (
+                <PropertyCard img={card.img} location={card.location} price={card.price} dataArea={card.area} dataType={card.type} type={card.type} area={card.area} key={index} id={card._id}/>
+              ))
+            }
+          </div>
           ) : ( search == '' ? (
             <div className="grid place-content-center h-80" >
               <PiEmpty className="text-center mx-auto text-7xl text-red-500" />
@@ -77,7 +82,6 @@ const Buy_HomePage = () => {
           )
         )
       }    
-      </div>
     </section>
   )
 }

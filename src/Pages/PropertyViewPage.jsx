@@ -62,7 +62,7 @@ const PropertyViewPage = () => {
               </div>
               <div>
                 <h4 className="text-gray-700 font-semibold">Phone Number:</h4>
-                <p className="text-gray-600">+91 {viewProperty.phoneNo}</p>
+                <p className="text-gray-600">+91 {viewProperty.phoneNo.toString().substr(0,4)}XXXXXX</p>
               </div>
               <div>
                 <h4 className="text-gray-700 font-semibold">Property Address:</h4>
