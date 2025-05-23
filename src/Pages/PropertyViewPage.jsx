@@ -16,6 +16,7 @@ const PropertyViewPage = () => {
       const response = await viewPropertyByIdHandle(id);
       if(response.status < 300){
         setViewProperty(response.data);
+        setLoading(false)
       }
     }
     catch (err) {
@@ -25,13 +26,10 @@ const PropertyViewPage = () => {
   
   useEffect(()=>{
     fetchView()
-    setTimeout(()=>{
-      setLoading(false)
-    },1200)
   }, [])
   
   return (
-    <main id="main" className="min-h-[calc(100vh-128px)] max-h-auto top-16 relative w-full mt-0 bg-cover bg-center">
+    <main id="main" className="min-h-[calc(100vh-64px)] max-h-auto top-16 relative w-full mt-0 bg-cover bg-center">
       <section className="w-full py-10 px-4 sm:px-6 lg:px-10">
       {
          loading ? (

@@ -7,7 +7,7 @@ import Footer from '../Components/Footer'
 
 const Home = () => {
   return (
-    <main id="main" className="h-[calc(100vh-128px)] top-16 overflow-x-hidden relative w-full mt-0 bg-cover bg-center">
+    <main id="main" className="h-[calc(100vh-64px)] overflow-x-hidden py-0 relative top-16 bg-cover bg-center">
       <HomePage />
       <Services />
       <About />
