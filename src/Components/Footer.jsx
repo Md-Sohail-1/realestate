@@ -2,6 +2,8 @@ import React from 'react'
 
 import { NavLink } from 'react-router';
 
+import { CiShare1 } from "react-icons/ci";
+
 const Footer = () => {
   return (
     <footer className="bg-gray-800 text-white py-12 m-0">
@@ -33,7 +35,9 @@ const Footer = () => {
       </div>
     </div>
 
-    <div className="text-center mt-10 text-sm text-gray-400">
+    <div className="text-center text-blue-100 w-full flex gap-2 items-center justify-center">Created By <p><a href="https://portfolio-sohail-snowy.vercel.app" className="hover:text-yellow-300 relative">Sohail<CiShare1 className="absolute top-1/2 -translate-y-1/2 -right-5"/></a></p></div>
+    
+    <div className="text-center mt-6 text-sm text-gray-400">
       <p>&copy; 2025 PrimeEstate. All Rights Reserved.</p>
     </div>
   </div>
