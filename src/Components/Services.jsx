@@ -32,7 +32,7 @@ const Services = () => {
   return (
     <section id="services" class="w-full bg-slate-100 px-4 sm:px-6 md:px-8 lg:px-12 pt-28 pb-16 md:pb-20 relative">
       <h3 class="absolute font-bold top-12 left-1/2 -translate-x-1/2 w-[300px] max-w-content text-3xl sm:text-3xl md:text-4xl md:w-[500px] text-center text-slate-700 z-20">Services We Offer</h3>  
-      <div class="grid grid-cols-1 px-2 sm:grid-cols-2 md:grid-cols-2 gap-4 md:gap-6 place-items-center">
+      <div class="flex mx-auto max-w-6xl flex-wrap px-2 gap-4 md:gap-6 justify-between items-center">
         {
           ourServices.map((card, index) => (
             <ServiceCard heading={card.heading} desc={card.desc} link={card.link} btnValue={card.btnValue} imageUrl={card.imageUrl} key={index}/>

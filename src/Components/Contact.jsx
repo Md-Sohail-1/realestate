@@ -73,7 +73,7 @@ const Contact = () => {
   }
   
   return (
-    <section id="contact_us" className="w-full py-16 px-6 sm:px-12 md:px-10 bg-slate-200 flex flex-col md:flex-row md:gap-6">
+    <section id="contact_us" className="w-full py-16 px-6 sm:px-12 md:px-10 bg-slate-200 flex justify-center items-center flex-col md:flex-row md:gap-6">
       <div className="flex-1 md:max-w-[400px] lg:min-w-[300px] pb-4 pt-0 md:py-4 px-0 text-center flex justify-center">
         <img loading="lazy" src={contactImage} alt="Conatct Us" className="w-full max-w-md mx-auto rounded-xl mix-blend-multiply" height="100%" width="100%" />
       </div>
@@ -81,7 +81,7 @@ const Contact = () => {
         // Confirmation Message 
       }
       <div id="confirmation" className={`${formSubmited === '' && 'hidden'} ${formSubmited ? 'text-green-600' : 'text-red-600'} font-medium mb-6`}>{formConfirmMsg}</div>
-      <form  onSubmit={formSubmit} className="flex-1 w-full max-w-3xl mx-auto grid gap-2 px-0 md:px-4 relative bg-transparent">
+      <form  onSubmit={formSubmit} className="flex-1 w-full max-w-3xl grid gap-2 px-0 md:px-4 relative bg-transparent">
         <h3 className="text-3xl sm:text-3xl md:text-4xl text-center font-bold text-slate-700 pb-4 md:mb-1">Connect With Us</h3>
         <div className="absolute inset-0 z-[-1] blur-[100px] rounded-xl bg-[radial-gradient(circle_at_center,_rgba(255,120,110,0.4),_rgba(110,120,255,0.4))]"></div>
         <input name='name' onChange={setInputValue} value={inputData.name} type="text" placeholder="Enter Name" required className="w-full p-3 rounded-md bg-slate-100 text-base shadow border border-transparent focus:outline-none focus:ring-2 focus:ring-indigo-400 transition" />
