@@ -27,10 +27,10 @@ const Review = () => {
   return(
     <section id="review" className="relative pt-12 pb-8 md:py-10 bg-slate-100 overflow-hidden px-2">
       <h3 className="text-3xl md:text-4xl sm:text-3xl font-bold text-center mb-6 text-slate-700">Happy Clients</h3>
-      <div id="review_wrapper" className="flex w-84 pb-8 overflow-x-auto scroll-smooth snap-x snap-mandatory space-x-4 md:space-x-6 px-4 sm:px-4 md:px-6 lg:px-8 max-w-6xl mx-auto pb-4">
+      <div id="review_wrapper" className="flex w-84 pb-8 overflow-x-auto scroll-smooth snap-x snap-mandatory space-x-4 md:space-x-6 px-4 sm:px-4 md:px-6 lg:px-8 max-w-6xl mx-auto">
         {
           myReviews.map((card, index) =>(
-            <ReviewCard name={card.name} review={card.review} />
+            <ReviewCard name={card.name} review={card.review} key={index}/>
           ))
         }
       </div>

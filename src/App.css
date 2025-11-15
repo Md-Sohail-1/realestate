@@ -9,6 +9,7 @@
     margin: 0px;
     scroll-behavior: smooth;
     font-family: Poppins;
+    scrollbar-width: none;
   }
 .loader {
   height: 4px;
@@ -26,4 +27,32 @@
 
 input[type="search"]::-webkit-search-cancel-button {
   -webkit-appearance: none;
+}
+
+#review_wrapper{
+  scrollbar-width: thin;
+  
+}
+
+#serviceCard{
+  animation: fadeCard both;
+  animation-timeline: view(60% 0%);
+}
+#about-text, #about-image{
+  animation: fadeCard both;
+  animation-timeline: view(60% 0%);
+
+}
+
+@keyframes fadeCard{
+  from{
+    opacity: 0;
+    scale: 0.9;
+    translate: 0 8rem;
+  }
+  to{
+    opacity: 1;
+    scale: 1;
+    translate: 0 0;
+  }
 }
