@@ -62,7 +62,7 @@ const Buy_HomePage = () => {
           <div id="property_wrapper" className={`grid gap-8 px-4 md:px-8 mx-auto md:mx-auto rounded-lg sm:grid-cols-2 lg:grid-cols-3 max-w-6xl`}>
             {
               filteredProperty.map((card, index) => (
-                <PropertyCard img={card.img} location={card.location} price={card.price} dataArea={card.area} dataType={card.type} type={card.type} area={card.area} key={index} id={card._id}/>
+                <PropertyCard img={card.img} location={card.location} price={card.price} dataArea={card.area} dataType={card.type} type={card.type} area={card.area} key={card._id} id={card._id}/>
               ))
             }
           </div>
